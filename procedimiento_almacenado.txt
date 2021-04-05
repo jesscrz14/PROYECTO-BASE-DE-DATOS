@@ -1,0 +1,16 @@
+DELIMITER //
+CREATE PROCEDURE au_insexperiencia(
+    IN id_exp int,
+    IN nom_empresa varchar(100),
+    IN tiempo_inicio date,
+    IN tiempo_fin date,
+    IN puesto varchar(50),
+    IN dni varchar(20)
+)
+BEGIN 
+INSERT INTO experiencia VALUE (id_exp, nom_empresa, tiempo_inicio, tiempo_fin, puesto, dni);
+END //
+DELIMITER ;
+
+
+DROP PROCEDURE au_insexperiencia;
